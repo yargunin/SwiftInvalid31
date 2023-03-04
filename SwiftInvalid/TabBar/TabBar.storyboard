@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Обучение-->
+        <scene sceneID="H50-FY-FO4">
+            <objects>
+                <viewController id="99w-j1-NPz" customClass="LearnViewController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gav-Y9-QRh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-QU-SNn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="43" id="uDi-Ar-L18" customClass="LearnTableViewCell" customModule="SwiftInvalid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDi-Ar-L18" id="iV1-gC-xpm">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ja-Ob-mEh">
+                                                    <rect key="frame" x="85" y="3.6666666666666679" width="71" height="35.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Ja-Ob-mEh" firstAttribute="top" secondItem="iV1-gC-xpm" secondAttribute="topMargin" constant="-7.3333333333333321" id="Dp3-gj-Mbg"/>
+                                                <constraint firstItem="8Ja-Ob-mEh" firstAttribute="centerY" secondItem="iV1-gC-xpm" secondAttribute="centerY" id="tkb-O9-2JM"/>
+                                                <constraint firstItem="8Ja-Ob-mEh" firstAttribute="leading" secondItem="iV1-gC-xpm" secondAttribute="leadingMargin" constant="65" id="xAQ-9t-KOm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuName" destination="8Ja-Ob-mEh" id="BaX-WR-zI4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="99w-j1-NPz" id="LD5-cT-SZL"/>
+                                    <outlet property="delegate" destination="99w-j1-NPz" id="iBB-cF-YaO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AfX-vO-F0t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Обучение" id="FyD-qc-iHs">
+                        <imageReference key="image" image="literature-64" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemOrangeColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2C-g7-Nxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1486.2595419847328" y="711.97183098591552"/>
+        </scene>
+        <!--Практика-->
+        <scene sceneID="aiq-0m-3BP">
+            <objects>
+                <viewController id="ivh-EV-dnt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SBp-HV-9e1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xhw-yF-yRY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Практика" image="positive-dynamic-64" id="nuq-9Z-3kC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl8-zO-WgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474" y="713"/>
+        </scene>
+        <!--Прогресс-->
+        <scene sceneID="joa-QA-6aB">
+            <objects>
+                <viewController id="Hd9-vO-ZQt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxJ-ys-xfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="t33-fq-XgE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Прогресс" image="home-64" id="88R-Cu-iqV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngk-Xw-S7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2463.3587786259541" y="713.38028169014092"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="idp-6h-z9f">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBar" id="SaF-dq-irO" customClass="TabBarController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hPv-Wa-x3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hd9-vO-ZQt" kind="relationship" relationship="viewControllers" id="aSv-k3-yAB"/>
+                        <segue destination="99w-j1-NPz" kind="relationship" relationship="viewControllers" id="ftA-1h-Vfs"/>
+                        <segue destination="ivh-EV-dnt" kind="relationship" relationship="viewControllers" id="e1J-dH-Pgt"/>
+                        <segue destination="KRi-3l-XvE" kind="relationship" relationship="viewControllers" id="qwJ-X5-O5j"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tH-x5-WZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1167" y="-97"/>
+        </scene>
+        <!--О Нас-->
+        <scene sceneID="Z4D-ZF-vjD">
+            <objects>
+                <viewController id="KRi-3l-XvE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyj-kF-w44">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4eq-A1-Pmv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="О Нас" image="heart-64" id="RcX-jJ-oyN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T87-dn-xtP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213" y="713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart-64" width="32" height="32"/>
+        <image name="home-64" width="32" height="32"/>
+        <image name="literature-64" width="32" height="32"/>
+        <image name="positive-dynamic-64" width="32" height="32"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
