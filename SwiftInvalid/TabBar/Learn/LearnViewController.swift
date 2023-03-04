@@ -32,6 +32,7 @@ class LearnViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.cells = ["Простые типы": ["Переменные и Константы", "Типы данных", "Многострочные строки", "Логические типы"],
                           "Сложные типы": ["Массивы", "Словари", "Кортежи"],
                           "Базовые операторы": ["Арифметические операторы", "Интерполяция строк", "Операторы присваивания"]]
+            
         }
         
         tableView.delegate = self
@@ -64,9 +65,10 @@ class LearnViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.menuName.font = UIFont(name: "Arial", size: 18)
         let theme = sections[indexPath.section]
         let subtheme = cells[theme]![indexPath.row]
-        cell.menuName.text = subtheme // устанавливаем текст ячейки
+        cell.menuName.text = subtheme // устанавливаем текст ячейки d
         return cell
         
+   
     }
     
 
