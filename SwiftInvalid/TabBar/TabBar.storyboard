@@ -73,7 +73,7 @@
         <!--Практика-->
         <scene sceneID="aiq-0m-3BP">
             <objects>
-                <viewController id="ivh-EV-dnt" sceneMemberID="viewController">
+                <viewController id="ivh-EV-dnt" customClass="ProgressViewController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SBp-HV-9e1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
         <!--Прогресс-->
         <scene sceneID="joa-QA-6aB">
             <objects>
-                <viewController id="Hd9-vO-ZQt" sceneMemberID="viewController">
+                <viewController id="Hd9-vO-ZQt" customClass="HomeViewController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mxJ-ys-xfQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
         <!--О Нас-->
         <scene sceneID="Z4D-ZF-vjD">
             <objects>
-                <viewController id="KRi-3l-XvE" sceneMemberID="viewController">
+                <viewController id="KRi-3l-XvE" customClass="ForUsViewController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zyj-kF-w44">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
