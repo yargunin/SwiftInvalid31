@@ -65,10 +65,29 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <connections>
+                        <segue destination="vu7-i8-cDw" kind="show" id="Xwh-A6-ugY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2C-g7-Nxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1486.2595419847328" y="711.97183098591552"/>
+        </scene>
+        <!--Identifier-->
+        <scene sceneID="3zt-RW-Q78">
+            <objects>
+                <viewController title="Identifier" id="vu7-i8-cDw" customClass="LearnViewController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vyz-k8-Cnn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="o5n-HI-sWg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="94j-bB-ypM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohh-vk-zdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1486" y="1384"/>
         </scene>
         <!--Практика-->
         <scene sceneID="aiq-0m-3BP">

@@ -104,11 +104,13 @@ class LearnViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.menuName.text = subtheme // устанавливаем текст ячейки d
         return cell
         
+        
+        
    
     }
-    
+ 
+    }
 
-}
                                      
                                      
                             
