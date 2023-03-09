@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vu7-i8-cDw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -66,28 +66,28 @@
                         </imageReference>
                     </tabBarItem>
                     <connections>
-                        <segue destination="vu7-i8-cDw" kind="show" identifier="learn" id="Xwh-A6-ugY"/>
+                        <segue destination="QWe-Rx-2iV" kind="show" customClass="LectureViewController" customModule="SwiftInvalid" customModuleProvider="target" id="aV9-1c-fh6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2C-g7-Nxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1486.2595419847328" y="711.97183098591552"/>
         </scene>
-        <!--Learn View Controller-->
-        <scene sceneID="3zt-RW-Q78">
+        <!--Lecture View Controller-->
+        <scene sceneID="Yfc-KX-p71">
             <objects>
-                <viewController id="vu7-i8-cDw" customClass="LearnViewController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" tag="2" contentMode="scaleToFill" id="Vyz-k8-Cnn">
+                <viewController id="QWe-Rx-2iV" customClass="LectureViewController" customModule="SwiftInvalid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y6S-lS-1dj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="o5n-HI-sWg"/>
+                        <viewLayoutGuide key="safeArea" id="OSk-yY-kcK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="94j-bB-ypM"/>
+                    <navigationItem key="navigationItem" id="EO2-G7-fMw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ohh-vk-zdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVD-AB-Huj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1486" y="1509"/>
+            <point key="canvasLocation" x="-1486" y="1494"/>
         </scene>
         <!--Практика-->
         <scene sceneID="aiq-0m-3BP">

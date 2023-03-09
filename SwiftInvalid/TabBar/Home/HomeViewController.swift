@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         progressRing.startProgress(to: 50, duration: 2.0)
     }
 }
-ewe
+
     /*
     // MARK: - Navigation
 

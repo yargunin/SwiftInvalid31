@@ -1,32 +1,33 @@
-//
-//  LearnViewController.swift
-//  SwiftInvalid
-//
-//  Created by admin on 06.02.2023.
-//
 
 import UIKit
 
 class LearnViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    // Задаем имена для ключей UserDefaults
-    let userDefaultsKey = "myUserDefaultsKey"
-    
-    var sections: [String] = [] // Для сохранения тем используем упорядоченный массив
+
+    // Properties
+    var userDefaultsKey: String?
+    var theme: String?
+    var sections: [String] = []
     var cells: [String: [String]] = [:]
-    
     let tableView = UITableView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Загружаем данные из UserDefaults
-        if let savedSections = UserDefaults.standard.array(forKey: "sections") as? [String],
-           let savedCells = UserDefaults.standard.dictionary(forKey: "cells") as? [String: [String]] {
+
+        enum UserDefaultsKeys: String {
+            case sections
+            case cells
+        }
+
+        // Затем использовать так:
+        if let savedSections = UserDefaults.standard.array(forKey: "\(UserDefaultsKeys.sections.rawValue)") as? [String],
+            let savedCells = UserDefaults.standard.dictionary(forKey: "\(UserDefaultsKeys.cells.rawValue)") as? [String: [String]] {
             self.sections = savedSections
             self.cells = savedCells
         }
-        else {
+
+        tableView.register(LearnTableViewCell.self, forCellReuseIdentifier: "cell")
+
+        if self.sections.isEmpty {
             // Если данных в UserDefaults нет, то задаем их вручную
             self.sections = ["Основы", "Базовые операторы", "Строки и символы",
              "Типы коллекций", "Управление потоком", "Функции", "Замыкания",
@@ -83,31 +84,39 @@ class LearnViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
-    }
-    
+    // MARK: - Table view data source
+       
+       func numberOfSections(in tableView: UITableView) -> Int {
+           return sections.count
+       }
+       
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let theme = sections[section]
-        return cells[theme]!.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section]
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LearnTableViewCell
-        cell.menuName.font = UIFont(name: "Arial", size: 18)
-        let theme = sections[indexPath.section]
-        let subtheme = cells[theme]![indexPath.row]
-        cell.menuName.text = subtheme // устанавливаем текст ячейки d
-        return cell
-   
-    }
- 
+        let sectionName = sections[section]
+        return cells[sectionName]?.count ?? 0
     }
 
-                                     
+       func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+           return sections[section]
+       }
+       
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? LearnTableViewCell else {
+            return UITableViewCell()
+        }
+        let sectionName = sections[indexPath.section]
+        let cellName = cells[sectionName]?[indexPath.row] ?? ""
+        cell.textLabel?.text = cellName
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sectionName = sections[indexPath.section]
+        let cellName = cells[sectionName]?[indexPath.row] ?? ""
+        let lectureVC = LectureViewController() // создаем новый экран LectureViewController
+        lectureVC.cellTitle = cellName // передаем заголовок ячейки на новый экран
+        navigationController?.pushViewController(lectureVC, animated: true) // выполняем переход на новый экран
+    }
+
+
+   }
                                      
                             
